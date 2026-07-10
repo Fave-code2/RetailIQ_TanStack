@@ -1,0 +1,1 @@
+A modern e-commerce admin dashboard built with React, TanStack Query, and Recharts. It provides product management, analytics, search, filtering, pagination, caching, and interactive data visualizations powered by the DummyJSON API.
