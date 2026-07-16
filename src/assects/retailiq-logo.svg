@@ -1,0 +1,27 @@
+<svg viewBox="0 0 480 150" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <style>
+      .navy { fill: #1D2B4F; }
+      .amber { fill: #F2A93B; }
+      .muted { fill: #6E7A94; }
+    </style>
+  </defs>
+
+  <!-- Icon: navy badge with off-white bag + ascending amber bars (matches icon-only mark) -->
+  <g transform="translate(10,20)">
+    <rect width="110" height="110" rx="22" class="navy"/>
+    <g transform="translate(9,11)">
+      <path d="M 32 22 Q 32 2 55 2 Q 78 2 78 22" fill="none" stroke="#FAF8F3" stroke-width="7" stroke-linecap="round"/>
+      <path d="M 20 24 L 90 24 L 100 92 Q 100 100 92 100 L 18 100 Q 10 100 10 92 Z" fill="#FAF8F3"/>
+      <rect x="30" y="66" width="12" height="26" rx="2" class="amber"/>
+      <rect x="49" y="52" width="12" height="40" rx="2" class="amber"/>
+      <rect x="68" y="34" width="12" height="58" rx="2" class="amber"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(128,0)">
+    <text x="0" y="80" font-size="52" font-weight="800" letter-spacing="-1" class="navy">Retail<tspan class="amber">IQ</tspan></text>
+    <text x="2" y="106" font-size="13" font-weight="600" letter-spacing="3.5" class="muted">RETAIL INTELLIGENCE</text>
+  </g>
+</svg>
