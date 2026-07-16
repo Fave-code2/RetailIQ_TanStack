@@ -1,21 +1,12 @@
-import React from "react";
-import { useQuery } from "@tanstack/react-query";
-import { fetchProducts } from "../api/products";
-import { fetchCategory } from "../api/category";
+import { useProducts } from "../hooks/useProducts";
+import { useCategory } from "../hooks/useCategory";
 import { FiBox, FiLayers, FiTag } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 
 const DashBoard = () => {
-  const { data } = useQuery({
-    queryKey: ["products"],
-    queryFn: fetchProducts,
-  });
+  const { data } = useProducts();
 
-  const { data: category = [] } = useQuery({
-    queryKey: ["category"],
-    queryFn: fetchCategory,
-    staleTime: 1000 * 60 * 60,
-  });
+  const { data: category = [] } = useCategory();
 
   const products = data?.products ?? [];
 
