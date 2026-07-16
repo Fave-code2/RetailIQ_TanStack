@@ -1,5 +1,4 @@
-import React from "react";
-import retail from "../../assects/retailiq-logo.svg";
+import retail from "../assects/retailiq-logo.svg";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { FiBox, FiTag, FiUsers } from "react-icons/fi";
 import { GiShoppingCart } from "react-icons/gi";
@@ -7,7 +6,7 @@ import { FaChartBar, FaCogs } from "react-icons/fa";
 
 const SideBar = () => {
   return (
-    <aside className="w-70 bg-gray-100 px-5 py-3 min-h-screen border-r border-gray-200 flex flex-col">
+    <aside className="w-70 bg-gray-200 px-5 py-3 min-h-screen border-r border-gray-200 flex flex-col">
       <header className="pb-5 border-b border-gray-500">
         <img src={retail} alt="logo" className="w-125" />
       </header>
