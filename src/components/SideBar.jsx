@@ -6,7 +6,7 @@ import { FaChartBar, FaCogs } from "react-icons/fa";
 
 const SideBar = () => {
   return (
-    <aside className="w-70 bg-gray-200 px-5 py-3 min-h-screen border-r border-gray-200 flex flex-col">
+    <aside className="w-70 bg-white px-5 py-3 h-screen border-r border-gray-200 flex flex-col overflow-hidden sticky top-0">
       <header className="pb-5 border-b border-gray-500">
         <img src={retail} alt="logo" className="w-125" />
       </header>

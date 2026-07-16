@@ -3,7 +3,7 @@ import { FiSearch, FiBell, FiHelpCircle } from "react-icons/fi";
 
 const NavBar = ({ title = "Dashboard" }) => {
   return (
-    <header className="w-full flex items-center justify-between border-b border-gray-200 bg-gray-100 px-6 py-3">
+    <header className=" flex items-center justify-between border-b border-gray-200 bg-blue-50 px-6 py-3 fixed top-0 left-70 right-0">
       <h1 className="text-lg font-semibold text-neutral-950 shrink-0">
         {title}
       </h1>

@@ -8,7 +8,7 @@ const RootLayout = () => {
       <SideBar />
       <div className="flex-1 flex flex-col min-h-screen">
         <NavBar />
-        <main className="flex-1 p-6 bg-gray-50">
+        <main className="flex-1 p-6 bg-blue-100 overflow-auto mt-12">
           <Outlet />
         </main>
       </div>
