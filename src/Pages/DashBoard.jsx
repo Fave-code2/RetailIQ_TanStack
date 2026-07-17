@@ -2,13 +2,14 @@ import { useProducts } from "../hooks/useProducts";
 import { useCategory } from "../hooks/useCategory";
 import { FiBox, FiLayers, FiTag } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
+import ProductPerCategory from "../components/ProductPerCategory";
 
 const DashBoard = () => {
-  const { data } = useProducts();
+  const { data: product = [] } = useProducts();
 
   const { data: category = [] } = useCategory();
 
-  const products = data?.products ?? [];
+  const products = product ?? [];
 
   const totalStock = products.reduce((sum, product) => sum + product.stock, 0);
 
@@ -38,7 +39,7 @@ const DashBoard = () => {
           </div>
 
           <p className="mb-2 text-4xl font-bold text-gray-900 flex items-center justify-center">
-            {data?.total}
+            {product.length}
           </p>
         </div>
 
@@ -86,15 +87,12 @@ const DashBoard = () => {
         </div>
       </section>
 
-      <section>
-        <div className="bg-white w-1/3">
-          <p>Category</p>
+      <section className="mt-8">
+        <div className="bg-white w-1/2 rounded-2xl">
+          <h3 className="text-center font-bold text-xl">Category</h3>
 
           <div className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-            temporibus corporis, qui eos doloribus voluptates nisi veniam
-            voluptatem inventore aliquid nam debitis. Omnis hic placeat unde nam
-            quos in voluptatem?
+            <ProductPerCategory />
           </div>
         </div>
       </section>

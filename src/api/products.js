@@ -6,5 +6,5 @@ const api = axios.create({
 
 export const fetchProducts = async () => {
   const res = await api.get("/products?limit=194");
-  return res.data;
+  return res.data.products;
 };
