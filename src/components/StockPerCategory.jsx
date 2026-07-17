@@ -7,32 +7,32 @@ import {
   Legend,
 } from "recharts";
 import { useProducts } from "../hooks/useProducts";
-import { getProductCountByCategory } from "../utils/productPcate";
+import { getStockPerCategory } from "../utils/stockPerCategory";
 
 const COLORS = [
-  "#8884d8",
-  "#82ca9d",
-  "#ffc658",
-  "#ff8042",
-  "#8dd1e1",
-  "#a4de6c",
-  "#d0ed57",
-  "#d88884",
-  "#83a6ed",
-  "#8a89a6",
+  "#26a69a",
+  "#ab47bc",
+  "#5c6bc0",
+  "#66bb6a",
+  "#ffa726",
+  "#ec407a",
+  "#7e57c2",
+  "#26c6da",
+  "#d4e157",
+  "#8d6e63",
 ];
 
-const ProductPerCategory = () => {
-  const { data: products = [] } = useProducts();
-  const chartData = getProductCountByCategory(products);
+const stockPerCategory = () => {
+  const { data: stock = [] } = useProducts();
+  const chartData = getStockPerCategory(stock);
 
   return (
     <ResponsiveContainer width="100%" height={450}>
       <PieChart>
         <Pie
           data={chartData}
-          dataKey="count"
-          nameKey="name"
+          dataKey="stock"
+          nameKey="category"
           cx="50%"
           cy="50%"
           outerRadius={120}
@@ -51,4 +51,4 @@ const ProductPerCategory = () => {
   );
 };
 
-export default ProductPerCategory;
+export default stockPerCategory;

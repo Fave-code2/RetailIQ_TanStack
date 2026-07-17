@@ -3,6 +3,7 @@ import { useCategory } from "../hooks/useCategory";
 import { FiBox, FiLayers, FiTag } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import ProductPerCategory from "../components/ProductPerCategory";
+import StockPerCategory from "../components/StockPerCategory";
 
 const DashBoard = () => {
   const { data: product = [] } = useProducts();
@@ -87,12 +88,22 @@ const DashBoard = () => {
         </div>
       </section>
 
-      <section className="mt-8">
+      <section className="mt-8 flex gap-5">
         <div className="bg-white w-1/2 rounded-2xl">
-          <h3 className="text-center font-bold text-xl">Category</h3>
+          <h3 className="text-center font-bold text-xl">
+            Product Per Category
+          </h3>
 
           <div className="">
             <ProductPerCategory />
+          </div>
+        </div>
+
+        <div className="bg-white w-1/2 rounded-2xl">
+          <h3 className="text-center font-bold text-xl">Stock Per Category</h3>
+
+          <div className="">
+            <StockPerCategory />
           </div>
         </div>
       </section>
